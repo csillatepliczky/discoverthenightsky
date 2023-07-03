@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+        <div class="main-upper my 5">
+            <div class="container">
+              <div class="row gx-5" >
+                <div class="col-lg-7" >
+                    <h1 class="mt-4"><b>CANIS MAJOR</b></h1>
+                    <h5><img src="/static/english.png" class="img-fluid" alt="english" width="30" height="20"> Larger Dog
+                        <img src="/static/german.png" class="img-fluid" alt="german" width="30" height="20"> Großer Hund
+                        <img src="/static/hungarian.png" class="img-fluid" alt="hungarian" width="30" height="20"> Nagy Kutya</h5>
+
+                        <br>
+                        <p class="text-justify">
+                            Canis Major is one of the oldest and most well-known constellations, which resembles a dog following the hunter Orion. For centuries only one star named Sirius represented the whole constellation,
+                            which is the brightest star in the sky. Canis Major is both visible on the northern and southern hemisphere, and can be best observed during the winter months from the northern hemisphere.
+
+                        </p>
+
+                        <p class="text-justify mb-5">
+                            As Sirius was a spectacular and well-known star since the ancient times, it is a part of many mythologies. It played a significant role in ancient cultures, like Mesopotamia,
+                            Egypt and Assyria. Later it also appeared in ancient Greece and the Roman empire, where it also got its name ("seirios means approx. shining").
+                            It was also the Greek astronomers, who completed the constellation by connecting some of the neighbouring stars to Sirius, and thus forming a shape that resembles a dog.
+                            The constellation doesn't appear in every mythology as a dog, for example the Hindus called it hunter, the Australian aboriginals saw an eagle in it,
+                            and some Native American tribes named it a salmon, that swims in the middle of a river, and is chased by a small and a big canoe (which are represented by the <a href="/orion">Orion</a> constellation).
+                        </p>
+
+                </div>
+                <div class="col-lg-5 mb-3">
+                    <a href="/static/CanisMaior.PNG" target="_blank"><img src="/static/CanisMaior.PNG" class="img-fluid mt-5 ml-5" alt="CM" ></a>
+                    <figcaption>Chart created with Stellarium 0.18.2</figcaption>
+                </div>
+               </div>
+
+            </div>
+          </div>
+            <div class="separator"></div>
+            <div class="main-lower">
+            <div class="container">
+               <div class="row justify-content-center">
+                <div class="col-md-10">
+                  <div class="objects-title mt-4 mb-3 border-bottom">
+                    <h3><b>Most notable stars and deep-sky objects</b></h3>
+                </div>
+                <div class="objects-text">
+                  <br>
+                    <h5><b>Sirius<img src="/static/eye2.png" alt="eye" width="40" height="40"></b></h5>
+                    <p>
+                        Sirius is the brightest star in the sky, its distance from Earth is only 8.6 light years.
+                        It already had a significant meaning for the people in ancient times, particularly in Egypt.
+                        The Egyptians saw its first rise before the sunrise every year as the beginning of the floods, and also calculated the Sirius-year according to the yearly path of Sirius
+                        in the sky.
+                        In 1862 its companion star, the smaller and fainter white dwarf Sirius B was discovered.
+                    </p>
+                </div>
+                <div class="objects-text">
+                    <h5><b>M41 open cluster (Little Beehive Cluster)  <img src="/static/binocular2.png" alt="binocular" width="30" height="30"><img src="/static/telescope2.png" alt="telescope" width="40" height="40"></b></h5>
+                    <p>
+                        M41 is an open cluster that covers an area about the size of the full Moon.
+                        It contains about 100 stars, including several red giants and white dwarfs.
+                    </p>
+                </div>
+
+
+                <div class="legend mb-4">
+                    <br><div class="legend-title"><b>Legend: </b></div><br>
+                      <table>
+                        <tr>
+                            <td><div class="legend-img"><img src="/static/eye2.png" alt="eye" width="30" height="30"></div></td>
+                            <td><div class="legend-item">Visible with the naked eye</div></td>
+
+                        </tr>
+                        <tr>
+                            <td><div class="legend-img"><img src="/static/binocular2.png" alt="binocular" width="20" height="20"></div></td>
+                            <td><div class="legend-item">Visible with binoculars</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="legend-img"><img src="/static/telescope2.png" alt="telescope" width="30" height="30"></div></td>
+                            <td><div class="legend-item">Visible with telescope</div></td>
+
+                        </tr>
+                        <tr>
+                            <td><div class="legend-img"><img src="/static/camera.png" alt="telescope" width="30" height="30"></div></td>
+                            <td><div class="legend-item">Popular target for astrophotography</div></td>
+
+                        </tr>
+                    </table>
+                  </div>
+               </div>
+            </div>
+          </div>
+{% endblock %}

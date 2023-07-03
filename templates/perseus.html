@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+
+        <div class="main-upper my 5">
+            <div class="container">
+              <div class="row gx-5" >
+                <div class="col-lg-7" >
+                    <h1 class="mt-4"><b>PERSEUS</b></h1>
+                    <h5><img src="/static/english.png" class="img-fluid" alt="english" width="30" height="20"> Perseus
+                        <img src="/static/german.png" class="img-fluid" alt="german" width="30" height="20"> Perseus
+                        <img src="/static/hungarian.png" class="img-fluid" alt="hungarian" width="30" height="20"> Perszeusz </h5>
+
+                        <br>
+                        <p class="text-justify">
+                            Perseus is a constellation in the northern sky near the northern celestial pole, named after the Greek mythological hero Perseus.
+                            He is the hero of the <a href="/andromeda">Andromeda</a>-myth, who saved Andromeda from the sea monster Cetus, and later married her.
+                            The galactic plane of the Milky Way passes through the constellation, making it home to many deep-sky objects.
+                            It hosts the radiant of the annual Perseids meteor shower in every August, which is one of the most spectacular meteor showers in the sky.
+                        </p>
+
+                        <p class="text-justify mb-5">
+                            Perseus was a prominent figure in the Greek mythology, who had an adventurous life (the Andromeda-myth was only one of his many adventures).
+                            His mother was Danae, daughter of Argos and his father was Zeus himself. When Argos received a prophecy, that he was going to be killed by his own grandson,
+                            he throwed Danae and her son into the sea. But they were rescued and provided shelter by the people of Seriphos island, where Perseus grew up and became a hero.
+                            <br>
+                            One of his adventures he was sent by the king of Seriphos to bring him the head of Medusa the Gorgon - whose visage caused all who gazed upon her to turn to stone.
+                            He was aided by the gods, who gave him a diamond sword, a helm of darkness to hide, a pair of winged sandals and a polished shield. In the cave he came upon the sleeping Medusa.
+                            By viewing Medusa's reflection in his polished shield, he safely approached and cut off her head.
+                        </p>
+
+                </div>
+                <div class="col-lg-5 mb-3">
+                    <a href="/static/Perseus.PNG" target="_blank"><img src="/static/Perseus.PNG" class="img-fluid mt-5 ml-5" alt="Perseus" ></a>
+                    <figcaption>Chart created with Stellarium 0.18.2</figcaption>
+                </div>
+               </div>
+
+            </div>
+          </div>
+            <div class="separator"></div>
+            <div class="main-lower">
+            <div class="container">
+               <div class="row justify-content-center">
+                <div class="col-md-10">
+                  <div class="objects-title mt-5 mb-3 border-bottom">
+                    <h3><b>Most notable stars and deep-sky objects</b></h3>
+                </div>
+                <div class="objects-text">
+                    <br>
+                    <h5><b>Algol<img src="/static/eye2.png" alt="eye" width="40" height="40"></b></h5>
+                    <p>
+                        The second brightest star of the constellation called Algol is actually a three-star system and one of the first non-nova variable stars to be discovered.
+                        Its magnitude drops from 2.1 to 3.4 in every two days, 20 hours and 48 minutes, as one of the fainter stars in the system passes before the brightest one,
+                        causing an eclipse.
+
+                    </p>
+                </div>
+                <div class="objects-text">
+                    <h5><b>M34 (Spiral Cluster)  <img src="/static/binocular2.png" alt="binocular" width="30" height="30"></b></h5>
+                    <p>
+                        M34 is a large, bright and relatively near open cluster, lying 1.500 light years away from Earth.
+                        The cluster is just visible to the naked eye in very dark conditions, but can be better observed with binoculars.
+
+                    </p>
+                </div>
+                <div class="objects-text">
+                    <h5><b>Double Cluster (NGC 869 and NGC 884)<img src="/static/eye2.png" alt="eye" width="40" height="40"><img src="/static/binocular2.png" alt="binocular" width="30" height="30"></b></h5>
+                    <p>
+                        The Double Cluster consists of the open clusters NGC 869 and NGC 884 which lie close together in the sky, making them one of the most beautiful
+                        and distinctive open clusters. Both visible with the naked eye, they are about 7.500 light years away from Earth.
+                    </p>
+                </div>
+                <div class="legend mb-4">
+                    <br><div class="legend-title"><b>Legend: </b></div><br>
+                        <table>
+                            <tr>
+                                <td><div class="legend-img"><img src="/static/eye2.png" alt="eye" width="30" height="30"></div></td>
+                                <td><div class="legend-item">Visible with the naked eye</div></td>
+
+                            </tr>
+                            <tr>
+                                <td><div class="legend-img"><img src="/static/binocular2.png" alt="binocular" width="20" height="20"></div></td>
+                                <td><div class="legend-item">Visible with binoculars</div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="legend-img"><img src="/static/telescope2.png" alt="telescope" width="30" height="30"></div></td>
+                                <td><div class="legend-item">Visible with telescope</div></td>
+
+                            </tr>
+                            <tr>
+                                <td><div class="legend-img"><img src="/static/camera.png" alt="telescope" width="30" height="30"></div></td>
+                                <td><div class="legend-item">Popular target for astrophotography</div></td>
+
+                            </tr>
+                        </table>
+                    </div>
+               </div>
+            </div>
+          </div>
+{% endblock %}

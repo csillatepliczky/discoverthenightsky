@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+<div class="observation-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 my-3 mx-5 px-4">
+                <div class="login-text mt-4">
+                    <h3>Observations list</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 my-2 mx-5 px-4">
+                <h6>Create your own observation list by selecting the objects on the <a href="/search">Search</a> page</h6>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-11 mt-3 mb-5 mx-5">
+                <table class="table table-dark text-right">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Name</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Constellation</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Coordinates (Right Ascension)</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Coordinates (Declination)</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Object type</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Visibility</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Difficulty to find</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;"></th>
+                    </tr>
+                </thead>
+
+                    <tbody>
+                        {% for obs in user_obs %}
+
+                      <tr>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.name }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.constellation }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.coordinates_ra }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.coordinates_dec }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.objecttype }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.visibility }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ obs.difficulty }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">
+                            <form method="post" action="{{ url_for('delete', obs_name=obs.name) }}">
+                            <input class="btn btn-secondary" type="submit" name="delete" value="Remove">
+                            </form>
+                        </td>
+                      </tr>
+
+                      {% endfor %}
+                    </tbody>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

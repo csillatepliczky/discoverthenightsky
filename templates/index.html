@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+          <div class="main-upper">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <h2 class="mt-5 mx-4">Discover the night sky</h2>
+                  <p class="mt-4 mx-4">
+                    If you look up to the sky from a dark place, you may immediately notice that the stars form different patterns and outlines, some more distinct than the others.
+                    The sky is divided into constellations, i. e. formations of stars named after an animal, a mythological creature or an other object. 88 of them is recognised
+                    nowadays, some were known already in the ancient times, some were created as late as the 17th and 18th century.
+                    <br>
+                    <br>
+                    On this page you can find information
+                    about the different constellations, like where to find them in the sky, about the mythologies and star lore surrounding them and and about
+                    the most spectacular stars and objects in each constellation. You can also create your own observation list with the objects
+                    you want to observe to plan your experience under the sky.
+                    <br>
+                    <br>
+                    Sounds interesting? <a href="/login">Login</a> or <a href="/register">register</a>!
+
+                </p>
+                </div>
+                <div class="col-md-5 mb-3">
+                  <a href="/static/eggomb.PNG" target="_blank"><img src="/static/eggomb.PNG" class="img-fluid mt-5 ml-5" alt="Sky"></a>
+                </div>
+               </div>
+          </div>
+          <div class="separator"></div>
+            <div class="main-lower">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="mt-5">Navigate the night sky</h2>
+                    <h4 class="mt-4">Constellations</h4>
+                        <p class="mt-4">
+                          At first glance, the stars appear to stand still in the sky, but as the Earth rotates,
+                          the stars rise in the eastern and set in the western horizon. Thanks to this slow movement, we can observe different constellations in the course of the night.
+                          But the list of visible constellations also changes during the year with the Earth's orbit around the Sun. For example in June
+                          we can see Sagittarius, and the winter constellations like Orion are near the Sun in the daytime sky. However in december the dark side of the Earth
+                          faces towards Orion thus it is visible during the night, while Sagittarius and its surroundings are near the Sun in the daytime sky.
+                          <br>
+                          The visibility of the different constellations also depends on the geographical location of the observer. Some
+                          constellations are visible only from the southern or northern hemisphere, some near the celestial equator are
+                          visible from nearly everywhere in the world.
+                          <br>
+                          <br>
+                          Navigating the night sky could be easier than it seems at first glance. Finding north and south is the first step
+                          (locating north on the northern hemisphere is easier, as a relative bright star, Polaris lies next to it. Just connect the two
+                          rear stars of the Big Dipper and take this distance five times to reach Polaris and the north celestial pole). Some
+                          bright and distinct constellations and asterisms (patterns of stars that are not constellations) are of help, like the W of Cassiopeia,
+                          the Big and Little Dipper or the Southern Cross.
+                        </p>
+                    </div>
+                  </div>
+
+                <div class="row">
+
+                  <div class="col-md-8">
+                      <h4 class="mt-4">Stars</h4>
+                        <p class="mt-4">
+                          The today used names of the stars originate from ancient Arabic and Greek names, but other name systems have been introduced as well.
+                          One of the most common is the Bayer designation introduced by Johann Bayer in the 17th century, which uses the letters of the Greek
+                          alphabet for the notation of the stars (alpha for the brightest star of the constellation, beta for the second brightest and so on).
+                          The brightness of the stars is most commonly measured in a unit called magnitude. The brightest visible star from Earth is Sirius
+                          with -1.46 magnitude and the faintest stars visible to the naked eye from a dark place are around 6 magnitude.
+                        </p>
+                  </div>
+                  <div class="col-md-4 mt-3">
+                    <a href="/static/brightness-magnitude-1.jpg" target="_blank"><img src="/static/brightness-magnitude-1.jpg" class="img-fluid mt-5 ml-5" alt="Magnitude" ></a>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h4 class="mt-4">Deep-sky objects </h4>
+                        <p class="mt-4">
+                          Deep-sky objects are celestial objects that exist outside our solar system. They can be found in all constellations,
+                          some are brighter and visible to the naked eye, some are faint, and can be observed only with telescopes or with photographic tools.
+                          The three major types of deep-sky objects are nebulae, star clusters, which exist within our galaxy, the Milky Way
+                          and galaxies, similar to ours, which are located millions and even billions of light years from the Earth.
+                          <br>
+                          The most common cataloging systems of deep-sky objects are the Messier catalog (abbreviated by M) introduced by Charles Messier in the 18th century
+                          and the New General Catalog (NGC) created by J. E. L. Dreyer in the late 19th century.
+
+                          <br>
+                          <br>
+                          Let's have a closer look on the different types of deep-sky objects:
+                        </p>
+
+                    </div>
+                </div>
+
+                  <div class="row justify-content-center">
+                    <div class="col-md-9 mb-5">
+                      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="12000">
+                            <img class="d-block w-100" src="/static/Eagle_nebula.jpg" alt="Emission nebula">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Emission nebula</h5>
+                                <p>
+                                  An emission nebula is a nebula formed of ionized gases that emits its own light, and is ionized by a nearby star.
+                                  The most common types of emission nebulae are the HII regions, in which star formation is taking place
+                                  and planetary nebulae, which are remnants of a dying star that has thrown off its outer layers.
+                                  Their bright colors can be observed only with astrophotographic tools.
+                                </p>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="12000">
+                            <img src="/static/pleiades.jpg" class="d-block w-100" alt="Reflection nebula">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Reflection nebula</h5>
+                                <p>
+                                  Reflection nebulae are clouds of interstellar dust which didn't have their own light but they reflect the light of a nearby star or stars.
+                                </p>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="12000">
+                            <img src="/static/darknebula.jpg" class="d-block w-100" alt="Dark nebula">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Dark nebula</h5>
+                                <p>
+                                  A dark nebula or absorption nebula is a type of interstellar cloud,
+                                  that is so dense that it obscures the light from objects behind it,
+                                  such as background stars and other deep-sky objects. It is usually a very faint object
+                                  that can be only captured with astrophotographic tools.
+                                </p>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="12000">
+                            <img src="/static/opencluster.jpg" class="d-block w-100" alt="Open cluster">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Open cluster</h5>
+                                <p>
+                                  An open cluster is a type of star cluster made of tens to a few thousand stars
+                                  that were formed from the same interstellar cloud and have roughly the same age. They are also physically close
+                                  to each other in space. Open clusters are generally younger than other star clusters,
+                                  they survive for a few hundred million years, with the most massive ones surviving for a few billion years.
+                                </p>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="12000">
+                            <img src="/static/globularcluster.jpg" class="d-block w-100" alt="Globular cluster">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Globular cluster</h5>
+                                <p>
+                                  A globular cluster can contain anywhere from tens of thousands to many millions of member stars, which are bound
+                                  together by gravity. They are the largest and most massive type of star clusters, tending to be older, denser than open clusters.
+                                  Some are among the oldest objects in their galaxies.
+                                </p>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="12000">
+                            <img src="/static/galaxy.jpg" class="d-block w-100" alt="Galaxy">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Galaxies</h5>
+                                <p>
+                                  A galaxy is a system of stars, stellar remnants, interstellar gas, dust and dark matter, bound together by gravity.
+                                  Galaxies contain anywhere from less than a hundred million stars to more trillion stars, each orbiting its galaxy's center of mass.
+                                  There are more types of galaxies, like elliptical, spiral or irregular. It is estimated
+                                  that there are approx. two trillion galaxies in the known universe.
+                                </p>
+                              </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+
+{% endblock %}

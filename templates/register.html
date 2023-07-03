@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+<div class="register-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="register-text mt-4">
+                    <h3>Register</h3>
+                </div>
+                <form action="/register" method="post">
+                    <div class="mb-3 mt-4">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="register-username" name="register-username" placeholder="Username" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control mx-auto w-auto" id="register-password" name="register-password" placeholder="Password" type="password">
+                    </div>
+                    <div class="mb-4">
+                        <input class="form-control mx-auto w-auto" id="confirm-password" name="confirm-password" placeholder="Confirm password" type="password">
+                    </div>
+                    <div class="col-md-12 mb-3 text-center">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                              <div class=flashes>
+
+                                <h6>{{ message }}</h6>
+
+                              </div>
+                              {% endfor %}
+                            {% endif %}
+                          {% endwith %}
+                        </div>
+                    <button class="btn btn-secondary mb-3" type="submit">Register</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

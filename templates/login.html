@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+<div class="login-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="login-text mt-4">
+                    <h3>Login</h3>
+                </div>
+                <form action="/login" method="post">
+                    <div class="mb-3 mt-4">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="login-username" name="login-username" placeholder="Username" type="text">
+                    </div>
+                    <div class="mb-4">
+                        <input class="form-control mx-auto w-auto" id="login-password" name="login-password" placeholder="Password" type="password">
+                    </div>
+                    <div class="col-md-12 mb-3 text-center">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                              <div class=flashes>
+
+                                <h6>{{ message }}</h6>
+
+                              </div>
+                              {% endfor %}
+                            {% endif %}
+                          {% endwith %}
+                        </div>
+                    <button class="btn btn-secondary mb-3" type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h6>Don't have an account yet? Click <a href="/register">here</a> to register!</h6>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

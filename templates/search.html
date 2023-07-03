@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+
+
+
+<div class="search-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11 mx-5 mt-5 mb-3">
+        <h3>Search for an object</h3>
+      </div>
+
+    <div class="row">
+      <div class="col-md-10 mx-5 mt-4 mb-3">
+        <form action="/search" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="Constellation" placeholder="Name">
+          </div>
+          <script>
+            document.querySelector('#name').addEventListener('keydown', (event) => {
+              if(event.key === 'Enter'){
+                document.querySelector('#name').submit()
+                return false
+              }
+            })
+            </script>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-md-10 mx-5">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class=flashes>
+
+            <h6>{{ message }}</h6>
+
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+      </div>
+
+  </div>
+
+  <div class="row">
+      <div class="col-lg-3 mx-5 mt-4 mb-3">
+        <form action="/search" method="post">
+          <div class="form-group">
+            <select class="form-control" name="objecttype" id="objecttype" onchange="this.form.submit();">
+              <option disabled selected>Object type</option>
+              <option>star</option>
+              <option>galaxy</option>
+              <option>emission nebula</option>
+              <option>reflection nebula</option>
+              <option>dark nebula</option>
+              <option>open cluster</option>
+              <option>globular cluster</option>
+              <option>planetary nebula</option>
+              <option>supernova remnant</option>
+            </select>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="col-lg-3 mx-5 mt-4 mb-3">
+        <form action="/search" method="post">
+          <div class="form-group">
+            <select class="form-control" name="constellation" onchange="this.form.submit();">
+              <option disabled selected>Constellation</option>
+
+              {% for cons in cons_to_select %}
+
+              <option>{{ cons }}</option>
+
+              {% endfor %}
+
+
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 mx-5 mt-4 mb-3">
+        <form action="/search" method="post">
+          <div class="form-group">
+            <select class="form-control" name="difficulty" onchange="this.form.submit();">
+              <option disabled selected>Difficulty to find</option>
+              <option>easy</option>
+              <option>medium</option>
+              <option>hard</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-3 mx-5 mt-4 mb-3">
+        <form action="/search" method="post">
+          <div class="form-group">
+            <select class="form-control" name="visibility" onchange="this.form.submit();">
+              <option disabled selected>Visibility</option>
+              <option>naked eye</option>
+              <option>binocular</option>
+              <option>telescope</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-11 my-5 mx-5">
+
+
+                <table class="table table-dark table-responsive text-right">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Name</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Constellation</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Coordinates (Right Ascension)</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Coordinates (Declination)</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Object type</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Visibility</th>
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;">Difficulty to find</th>
+
+                        {% if session["user_id"] %}
+                        <th scope="col" style="background-color: #171a21; color: #e4ebf3;"></th>
+                        {% endif %}
+                      </tr>
+                    </thead>
+
+                    {% if request.method == 'POST' %}
+                    <tbody>
+                        {% for constellation in constellations %}
+
+                      <tr>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.name }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.constellation }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.coordinates_ra }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.coordinates_dec }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.objecttype }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.visibility }}</td>
+                        <td style="background-color: #171a21; color: #e4ebf3;">{{ constellation.difficulty }}</td>
+
+                        {% if session["user_id"] %}
+                        <td style="background-color: #171a21; color: #e4ebf3;">
+                          <form method="post" action="{{ url_for('add', constellation_name=constellation.name) }}">
+                          <input class="btn btn-secondary" type="submit" name="add" value="Add to observations">
+                          </form>
+                          {% endif %}
+                      </td>
+
+                      </tr>
+
+                      {% endfor %}
+                    </tbody>
+                    {% endif %}
+
+                  </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
