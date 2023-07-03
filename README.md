@@ -1,6 +1,6 @@
 # DISCOVER THE NIGHT SKY
 #### Video Demo:  <URL HERE>
-#### Website link:
+#### Website link: http://tcsilla.pythonanywhere.com/
 
 ## Description
 ### About the project
