@@ -20,9 +20,9 @@ I used three tables for my database:
 
 I used SQLite for querying into the databases.
 
-### Documentation
-https://flask.palletsprojects.com/en/1.1.x/
-https://getbootstrap.com/
+### Documentation 
+- https://flask.palletsprojects.com/en/1.1.x/
+- https://getbootstrap.com/
 
 
 ### About CS50
